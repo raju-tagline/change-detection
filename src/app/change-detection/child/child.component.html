@@ -1,8 +1,11 @@
 <div class="card change-detection-card">
-    <div class="card-header">
-        {{child()}}
-    </div>
+  <div class="card-header">Child</div>
+  <div class="card-body">
+    <h5 class="text-danger">
+      {{ child() }}
+    </h5>
     <p class="mt-3 mx-3">
-        {{ dataTransfer  + ' from Parent'}}
+      {{ dataTransfer + " from Parent" }}
     </p>
+  </div>
 </div>

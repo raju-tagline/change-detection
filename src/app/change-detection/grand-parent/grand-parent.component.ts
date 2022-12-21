@@ -4,45 +4,23 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   selector: 'app-grand-parent',
   templateUrl: './grand-parent.component.html',
   styleUrls: ['./grand-parent.component.scss'],
-  changeDetection:ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GrandParentComponent implements OnInit {
-  contentHeader: object;
-  count : number = 0;
-  parentInput:any;
+  count: number = 0;
+  parentInput: any;
 
-  constructor() {
-    this.contentHeader = {
-      headerTitle: 'Angular',
-      actionButton: true,
-      breadcrumb: {
-        type: '',
-        links: [
-          {
-            name: 'Change detection',
-            isLink: false,
-            link: '/'
-          },
-          {
-            name: 'Parent',
-            isLink: false
-          }
-        ]
-      }
-    }
-  }
+  constructor() {}
 
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
-  grandParent():string{
+  grandParent(): string {
     console.log('GrandParent rendered !');
-    this.count ++;
+    this.count++;
     return `Grand parent rendered ${this.count} times`;
   }
 
-  fromParentToGP(event:any){
-    this.parentInput = event; 
+  fromParentToGP(event: any) {
+    this.parentInput = event;
   }
 }
