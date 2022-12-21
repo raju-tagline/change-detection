@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card change-detection-card">
+            <div class="card-header">
+                {{ grandParent() }}
+            </div>
+
+        <p class="mt-3 mx-3">
+            {{parentInput}}
+        </p>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <app-parent (fromParentToGP)="fromParentToGP($event)"></app-parent>
+    </div>
+</div>
