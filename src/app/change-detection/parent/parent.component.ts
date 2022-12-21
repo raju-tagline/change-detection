@@ -17,7 +17,6 @@ export class ParentComponent implements OnInit {
   interval = interval(3000);
   dataTransfer: number = 1;
   dataToGP!: string;
-  numbers: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   @Output() fromParentToGP: EventEmitter<string> = new EventEmitter<string>();
 
@@ -31,13 +30,11 @@ export class ParentComponent implements OnInit {
   }
 
   parent(): string {
-    console.log('Parent rendered !');
     this.count++;
     return `Parent rendered ${this.count} times`;
   }
 
   sendData(event: any) {
-    console.log('event :>> ', event);
     this.fromParentToGP.emit(event);
   }
 }

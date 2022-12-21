@@ -15,7 +15,6 @@ export class GrandParentComponent implements OnInit {
   ngOnInit(): void {}
 
   grandParent(): string {
-    console.log('GrandParent rendered !');
     this.count++;
     return `Grand parent rendered ${this.count} times`;
   }
