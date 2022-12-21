@@ -1,7 +1,7 @@
 <div class="row m-0">
   <div class="col-sm-6">
     <div class="card change-detection-card">
-      <div class="card-header">Parent rendered</div>
+      <div class="card-header">Parent</div>
       <div class="card-body">
         <h5 class="text-danger">
           {{ parent() }}
@@ -13,13 +13,6 @@
           class="form-control w-50 mt-2"
           placeholder="Type your wish..."
         />
-      </div>
-
-      <div class="mt-4 card-footer">
-        <p>This content is displayed with loop</p>
-        <ng-container *ngFor="let number of numbers">
-          {{ number }}
-        </ng-container>
       </div>
     </div>
   </div>
